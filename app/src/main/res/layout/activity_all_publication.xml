@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".all_publication">
+
+
+
+    <RelativeLayout
+        android:id="@+id/accueil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/accueil_background">
+
+
+
+        <ImageView
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profill"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/leveesoleil"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accueil"
+            android:layout_toEndOf="@id/profill"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/accueil"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Layout au-dessus du RecyclerView -->
+            <RelativeLayout
+                android:id="@+id/layout_ascendant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/dakar"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                        android:src="@drawable/dakar"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:scaleType="centerCrop" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toEndOf="@id/dakar"
+                        android:layout_alignTop="@id/dakar"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:background="@drawable/question_parteger">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Que souhaitez-vous signaler ou partager?"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/_10ssp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:textColor="#A3A2A2" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rubrique"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_below="@id/question">
+
+
+                    <RelativeLayout
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView8"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5">
+
+                        <ImageView
+                            android:id="@+id/editer"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ask2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_toEndOf="@id/editer"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Demander" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:background="@drawable/trait_separation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textView8"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:background="@drawable/trait_separation"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textView9"
+                        app:layout_constraintStart_toEndOf="@+id/textView8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/textView9"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5">
+
+
+                        <ImageView
+                            android:id="@+id/editer"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/repondre" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_toEndOf="@id/editer"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_10ssp"
+                            android:text="Repondre" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/textView8"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5">
+
+
+                        <ImageView
+                            android:id="@+id/editer"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/write" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_toEndOf="@id/editer"
+                            android:textSize="@dimen/_10ssp"
+                            android:textStyle="bold"
+                            android:text="Publier" />
+                    </RelativeLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@drawable/trait_separation"/>
+
+
+            <!-- RecyclerView en dessous du layout -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutbottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_6sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_alignTop="@id/im1"
+                android:layout_toEndOf="@id/im1"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/rounded_red"/>
+
+            <ImageView
+                android:id="@+id/im1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bienalbold"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:textSize="@dimen/_9ssp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/im1"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_toEndOf="@id/notify"
+                android:layout_marginStart="-25dp"
+                android:background="@drawable/rounded_red">
+
+
+                <RelativeLayout
+                    android:id="@+id/ndieuk"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:id="@+id/ndieuk2"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_toEndOf="@id/notif_number"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/notif_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_toEndOf="@id/ndieuk"
+                    android:text="5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/im3"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/not" />
+
+
+
+            <TextView
+                android:id="@+id/notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bienalbold"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/im3"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+
+
+
+            <ImageView
+                android:id="@+id/im4"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/gox" />
+
+
+
+            <TextView
+                android:id="@+id/gox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunu gox"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bienalbold"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/im4"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5">
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_toEndOf="@id/message"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/rounded_red">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="8"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9ssp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/im5"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/email2" />
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textSize="@dimen/_9ssp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/bienalbold"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/im5"/>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>

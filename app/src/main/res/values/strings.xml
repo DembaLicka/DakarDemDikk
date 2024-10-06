@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DakarDemDikk</string>
+    <string name="google_maps_key">AIzaSyArQQSYw7uI2PErSntnx_0i8e8vITToO5Q</string>
+    <string name="description_hint">Description</string>
+</resources>

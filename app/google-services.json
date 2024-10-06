@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "99968243887",
+    "firebase_url": "https://dakardemdikk-bbc2f-default-rtdb.firebaseio.com",
+    "project_id": "dakardemdikk-bbc2f",
+    "storage_bucket": "dakardemdikk-bbc2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99968243887:android:9421cc2691bf8dae50dc5a",
+        "android_client_info": {
+          "package_name": "com.example.dakardemdikk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99968243887-jr91194j9le03tatrs52t1rulbdnacu2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dakardemdikk",
+            "certificate_hash": "56b449980ce07c84d04a3f855749011b7a0d2bf1"
+          }
+        },
+        {
+          "client_id": "99968243887-b9u6c52p2k0deotd14u2nkt78mjrha08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs9sQsGztmgsO3QsoD5z2kF-vOfKyIfYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99968243887-b9u6c52p2k0deotd14u2nkt78mjrha08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

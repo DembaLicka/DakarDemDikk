@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DakarDemDikk" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:iconifiedByDefault">false</item>
+        <item name="android:queryHint">Rechercher...</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:queryBackground">@android:color/transparent</item>
+        <item name="android:submitBackground">@android:color/transparent</item>
+        <item name="android:textAppearance">@style/CustomSearchTextAppearance</item>
+
+    </style>
+
+
+    <style name="CustomSearchTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+    <!-- Style pour le texte dans le SearchView -->
+    <style name="CustomSearchEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="CornerSize50Percent" parent="">
+        <item name="cornerSize">20%</item>
+
+    </style>
+
+    <style name="CornerSize10Percent" parent="">
+        <item name="cornerSize">7%</item>
+
+    </style>
+</resources>

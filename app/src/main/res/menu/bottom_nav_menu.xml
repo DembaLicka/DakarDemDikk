@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Élement de menu pour la page d'accueil -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+
+     />
+
+    <!-- Élement de menu pour la recherche -->
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/recherc"
+        />
+
+    <!-- Élement de menu pour les notifications -->
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/not"
+         />
+
+
+    <item
+        android:id="@+id/navigation_edi"
+        android:icon="@drawable/communaute"
+        />
+
+
+    <item
+        android:id="@+id/navigation_message"
+        android:icon="@drawable/email"
+        />
+</menu>
